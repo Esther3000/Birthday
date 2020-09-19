@@ -1,0 +1,53 @@
+{
+ 
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-lightpink);
+  background-image: linear-gradient(
+      115deg,rgba(223,27,195, 0.6),
+      rgba(136, 136, 206, 0.7)
+    ),url("https://media3.giphy.com/media/8AdhxLETq6WhyyyxBk/200w.webp?cid=ecf05e4702f2d9a0e4c98b4bccf9e2e0f04800dc02ae5649&rid=200w.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+.content{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+p{
+   white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Caveat Brush', cursive; 
+  text-align: center;
+  font-size: 100px;
+
+  color: rgba(255,255,255,.70);
+  animation: animated-text 2s steps(30,end) 2s infinite normal both;
+}
+@keyframes animated-text{
+  from{width: 0px;}
+  to{width: 1200px;}
+}
+@media (max-width: 768px){
+ .content{
+  top: 50%;
+ }
+}
